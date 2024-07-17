@@ -1,13 +1,19 @@
 package com.example.userappplication;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 // all code from this class has been procesed with  java code and xml file
 
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
+
+        //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+//                "applicationContext.xml"
+//        );
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
         System.out.println(musicPlayer.getTimePlaying());
