@@ -1,6 +1,7 @@
 package com.example.userappplication;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+// all code from this class has been procesed with  java code and xml file
 
 public class TestSpring {
     public static void main(String[] args) {
